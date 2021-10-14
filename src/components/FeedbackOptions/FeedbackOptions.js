@@ -1,6 +1,6 @@
 
 import s from './FeedbackOptions.module.css';
-// import shortid from 'shortid';
+import shortid from 'shortid';
 
 import PropTypes from 'prop-types';
 
@@ -12,7 +12,7 @@ export default function FeedbackOptions({ options, onLeaveFeedback }) {
                     onClick={() => onLeaveFeedback(option)}
                     type="button"
                     className={s.button}
-                // key={shortid.generate()}
+                    key={shortid.generate()}
                 >
                     {option}
                 </button>
