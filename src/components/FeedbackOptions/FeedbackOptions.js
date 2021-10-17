@@ -6,18 +6,20 @@ import PropTypes from 'prop-types';
 
 export default function FeedbackOptions({ options, onLeaveFeedback }) {
     return (
-        <div className={s.bottons}>
-            {options.map(option => (
-                <button
-                    onClick={() => onLeaveFeedback(option)}
-                    type="button"
-                    className={s.button}
-                    key={shortid.generate()}
-                >
-                    {option}
-                </button>
-            ))}
-        </div>
+        <div className={s.button_list}>
+            {
+                options.map(option => (
+                    <button
+                        onClick={() => onLeaveFeedback(option)}
+                        type="button"
+                        className={s.button}
+                        key={shortid.generate()}
+                    >
+                        {option}
+                    </button>
+                ))
+            }
+        </div >
 
     );
 }
